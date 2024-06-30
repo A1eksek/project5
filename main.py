@@ -159,7 +159,45 @@ from accessify import private, protected
 
 "s"
 
-class Person:
+# class Person:
+#     def __init__(self, name):
+#         self.__name = name
+#
+#     @property #getter
+#     def name(self):
+#         return self.__name
+#
+#     @name.setter
+#     def name(self, value):
+#         self.__name = value
+#
+#     @name.deleter
+#     def name(self):
+#         del self.__name
+
+
+# person = Person("Vasya")
+# print(person.name)
+# person.name = "Vlad"
+# print(person.name)
+# person = Person("John")
+# print(person.__dict__)
+# del person.name
+# print(person.__dict__)
+
+# class Teleport:
+#     @private
+#     def __activator_teleport(self):
+#         print('Активатор от телепорта у Машеньки под подушки')
+#
+#     def mama_help(self):
+#         self.__activator_teleport()
+#
+# person = Teleport()
+# person.mama_help()
+
+
+class Balance:
     def __init__(self, name):
         self.__name = name
 
@@ -175,12 +213,9 @@ class Person:
     def name(self):
         del self.__name
 
-
-# person = Person("Vasya")
-# print(person.name)
-# person.name = "Vlad"
-# print(person.name)
-person = Person("John")
-print(person.__dict__)
+person = Balance(10000)
+print(person.name)
+person.name = 15000
+print(person.name)
 del person.name
 print(person.__dict__)
